@@ -23,12 +23,13 @@ pipeline {
             }
         }
 
-        stage('Compile Java Code') {
-            steps {
-                echo 'Compiling Java files...'
-                bat 'javac **/*.java'
-            }
-        }
+       stage('Compile Java Code') {
+    steps {
+        echo 'Compiling Java files...'
+        bat 'javac Test.java'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
